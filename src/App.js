@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // Import Axios library
+import axios from "axios";
 import SearchHistory from "./Components/SearchHistory";
 import SearchInput from "./Components/SearchInput";
 import SearchResults from "./Components/SearchResults";
@@ -27,7 +27,7 @@ function App() {
     setSearchQuery(query);
     try {
       const response = await axios.get(
-        `http://localhost:5226/api/moviesearch?title=${query}`
+        `http://localhost:5226/api/moviesearch?title=${query}` 
       );
       setSearchResults(response?.data);
 
